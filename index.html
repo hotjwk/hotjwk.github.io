@@ -1,44 +1,492 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Site Info -->
+    <title>JunSoo Kang - Portfolio</title>
+    <meta name="description" content="JunSoo Kang - Programming educator on YouTube. Simplifying complex concepts into manageable steps to help learners digest material at their own pace.">
+    <meta name="author" content="JunSoo Kang">
 
-    <title>My Portfolio</title>
+    <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
+    <meta property="og:title" content="JunSoo Kang">
+
+    <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
+    <meta property="og:type" content="website">
+
+    <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
+    <meta property="og:url" content="/index.html">
+
+    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
+    <meta property="og:image" content="/portfolio_media/jskprofile.png">
+
+    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
+    <meta property="og:image:alt" content="JunSoo Kang Profile Image">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern_normalize.css" />
+    <link rel="stylesheet" href="css/html5bp.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Set a theme color that matches your website's primary color -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- Favicon for all browsers -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
+    <!-- Apple touch icon for iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+
+    <!-- Web app manifest for Progressive Web Apps -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
   </head>
+
   <body>
-    <div class="container">
-      <h1>My Portfolio</h1>
-   
+    <header class="page-header">
+      <div class="container">
+        <div class="header-top flex-responsive">
+          
+            <img class="header-image"
+                 width="256"
+                 height="256"
+                 src="portfolio_media/jskprofile.png"
+                 alt="JunSoo Kang Profile Image" />
+          
+          <div class="header-info">
+            <h1>강준수</h1>
+            <h2 class="header-label">투자자산 운용사 | 공인 중개사</h2>
+            
+              <address>
+                <ul class="inline-list flex-responsive">
+                  
+                    <li>
+                      <a href="mailto:alkazan@naver.com">alkazan@naver.com</a>
+                    </li>
+                  
+                  
+                  <li> 경기 의왕시 고천동</li>
+                </ul>
+              </address>
+            
+            
+              <ul class="inline-list flex-responsive">
+                
+                  <li>
+                    <a href="https://jsklab.kr"
+                       rel="noopener noreferrer"
+                       aria-label="jsklab.kr"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-globe-americas"
+     viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+</svg>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam augue eget lorem tempor, et euismod turpis blandit. Donec in sodales neque. Pellentesque nibh enim, accumsan id semper at, scelerisque nec eros. Integer ut semper metus. Sed commodo dolor nisl, sed blandit tellus pretium non. Quisque eget velit vel ante dapibus accumsan. Cras in ipsum lacinia, tempor tortor sed, auctor augue. Duis consectetur pulvinar nisi, in bibendum ligula condimentum a. Sed vestibulum, enim maximus auctor dictum, lorem ipsum ullamcorper lorem, vel elementum nulla tortor fermentum orci. Vestibulum mattis tortor gravida orci euismod faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vitae vulputate sem. Quisque eget efficitur eros, a euismod nibh. Sed nulla lectus, consequat at arcu in, dictum sagittis arcu. Phasellus cursus dui sed mi facilisis efficitur egestas ac urna.
-      
-      Sed in ligula in elit pharetra eleifend nec id neque. Proin fringilla, felis ac sollicitudin ultrices, nisi ipsum gravida nisl, consequat facilisis mi justo sed nibh. Phasellus tempus mi nulla, ac consectetur diam ultricies laoreet. Donec dapibus, ligula pharetra blandit efficitur, erat sapien vulputate lorem, vitae feugiat magna tellus tempor nisl. Morbi id mi rutrum, faucibus urna nec, pulvinar enim. Pellentesque ut neque feugiat enim efficitur finibus. In facilisis quam nec suscipit aliquam. Morbi varius interdum ante, at semper magna blandit vitae. Donec mattis consectetur justo et gravida. Integer sed justo felis.
-      
-      Nam vestibulum lectus tellus, a dapibus diam pretium eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nulla lectus, facilisis quis euismod in, tristique et erat. Phasellus condimentum ac libero a interdum. Nunc venenatis ac diam eget porttitor. Phasellus rhoncus nulla purus, vitae convallis tellus sodales non. Nullam in mattis metus, quis posuere mauris.
-      
-      Aenean tempor faucibus mi quis aliquam. Vivamus tempor, augue sed suscipit gravida, libero sapien aliquet leo, non vestibulum tortor ligula ac sapien. Maecenas congue vehicula lectus sit amet hendrerit. Mauris suscipit magna faucibus odio feugiat, ac volutpat justo egestas. Proin volutpat rutrum maximus. Duis at pretium neque. Cras blandit convallis est, at lacinia ex congue eget. Fusce nec iaculis purus. Praesent ultrices vel nunc a cursus. Vivamus placerat velit sem, non molestie nunc pharetra in. Maecenas finibus eros vel odio porttitor suscipit. Integer tincidunt neque ut massa egestas ultrices. Donec vestibulum dolor vitae dui varius vestibulum.
-      
-      Vestibulum placerat orci vel urna tempus porttitor. Nullam tincidunt pretium odio et convallis. Mauris augue purus, elementum quis nisl vitae, cursus imperdiet enim. Ut vel arcu eu ipsum lobortis lacinia ac quis quam. Duis eu faucibus enim. Nullam rhoncus eleifend nunc in posuere. Vivamus at tincidunt enim. Donec semper turpis id quam tristique volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed magna erat, facilisis at nunc vel, porta fringilla lectus. Praesent ante neque, hendrerit id turpis ut, luctus pulvinar felis.</p>
-  <!-- Content here -->
-</div>
-    <img src="images/hero-bg.jpg" class="img-fluid" alt="...">
-    
-    
-    <!-- Optional JavaScript; choose one of the two! -->
+                      jsklab.kr
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://youtube.com/"
+                       rel="noopener noreferrer"
+                       aria-label="YouTube"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-youtube"
+     viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+</svg>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                      YouTube
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://www.instagram.com/"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-instagram"
+     viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+</svg>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+                      Instagram
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://github.com/"
+                       rel="noopener noreferrer"
+                       aria-label="Github"
+                       class="link-with-icon">
+                      <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-github"
+     viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+</svg>
+
+                      Github
+                    </a>
+                  </li>
+                
+              </ul>
+            
+            <p class="header-summary">[군필] 2016.08 - 2018.05 육군병장 제대.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <main>
+          
+            <section>
+              <h2 class="section-heading">업무경력</h2>
+              
+                <section>
+                  <h3>
+                    
+                      NH 농협은행 | RM 마케팅추진단 주임/계장
+                    
+                  </h3>
+                  
+                    <p class="section-label">2025.02 - 재직중</p>
+                  
+                  
+                  
+                    <ul>
+                      <li>주요직무 | 심사.</li>
+                    </ul>
+                  
+                </section>
+              
+                <section>
+                  <h3>
+                    
+                      한국토지주택공사 | 인턴
+                    
+                  </h3>
+                  
+                    <p class="section-label">2024.05 - 2024.11</p>
+                  
+                  
+                  
+                    <ul>
+                      <li>Developed and designed GIS web applications with the ArcGIS JavaScript API</li><li>Wrote and published geoprocessing services using Python and ArcPy</li><li>Created backend user authentication systems with PHP and MySQL</li>
+                    </ul>
+                  
+                </section>
+              
+                
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">교육훈련</h2>
+
+              <section>
+                <h3>
+                    상업용부동산 실무 | 어프렌티스
+                </h3>
+                
+                  <p class="section-label">2023.08 - 2023.08</p>
+
+                  <ul>
+                    <li>상업용부동산 투자실무 및 밸류에시션</li>
+                  </ul>
+                
+              </section>
+
+                <section>
+                  <h3>
+                    
+                      자산관리양성교육 | 한국리츠협회
+              
+                  </h3>
+                  
+                    <p class="section-label">2023.05 - 2023.05</p>
+                  
+                    <ul>
+                      <li>자본시장법 및 부동산 펀드 실무교육</li>
+                    </ul>
+                  
+                </section>
+            </section>
+
+            <section>
+              <h2 class="section-heading">자격증</h2>
+
+              <section>
+                <h3>
+                    공인중개사 | 한국산업인력공단단
+                    <p class="section-label">2024.12</p>
+                </h3>
+                
+              </section>
+
+                <section>
+                  <h3>
+                      AFPK | 한국 FP협회
+                      <p class="section-label">2024.04</p>
+                  </h3>
+                </section>
+
+                <section>
+                  <h3>
+                      TOEIC | ETS(한미교육위원단)
+                      <p class="section-label">2024.02</p>
+                  </h3>
+                </section>
+
+                <section>
+                  <h3>
+                      투자자산운용사 | 금융투자협회
+                      <p class="section-label">2023.06</p>
+            
+                  </h3>
+                </section>
+            </section>
+
+
+            <section>
+              <h2 class="section-heading">포트폴리오</h2>
+              
+              <div class="gallery main-gallery">
+                      
+                <figure>
+                  <img width="600"
+                       height="338"
+                       src="portfolio_media/jskacademia.png"
+                       alt="Main Channel">
+                  <figcaption>파이썬 티킨터를 이용한 프로그램</figcaption>
+                </figure>
+              
+                <figure>
+                  <img width="600"
+                       height="338"
+                       src="portfolio_media/bgmonteC.png"
+                       alt="Tutorials">
+                  <figcaption>엑셀 몬테카를로 시뮬레이션</figcaption>
+                </figure>
+              
+                <figure>
+                  <img width="600"
+                       height="338"
+                       src="portfolio_media/loancalkor_b.png"
+                       alt="Live Streams">
+                  <figcaption>대출금 상환 계산기</figcaption>
+                </figure>
+              
+              </div>
+            </br>
+          </br>
+        </br>
+            </section>
+               
+                  <h3>
+                    
+                      <a href="https://">위에있는 프로그램들은 제 홈페이지 jsklab.kr에서 다운로드 받을 수 있습니다.</a>
+                  </h3> 
+                </br>
+                  <p>Channel focused on creating simulation program for financial analysis and investment.</p>
+                  
+                   
+                  
+                  
+                    
+                  
+                </section>
+              
+            </section>
+          
+
+          
+            
+          
+
+          
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside>
+          
+            <section>
+              <h2 class="section-heading">학력</h2>
+              
+                <section>
+                  <h3>
+                      <a href="https://">고려사이버대학교 | 부동산학과(편입)</a>
+                  </h3>
+                  <p class="section-label">2021.03 - 2023.02</p>
+                    <h4>학점 | 4.23/4.5</h4>
+                </section>
+
+                <section>
+                  <h3>
+                      <a href="https://">두원공과대학교 | 관광경영학과</a>
+                  </h3>
+                  <p class="section-label">2015.03 - 2019.07</p>
+                    <h4>학점 | 3.8/4.5</h4>
+                </section>
+              
+            </section>
+          
+
+          
+            <section>
+              <h2 class="section-heading">어학 및 소프트웨어 활용능력</h2>
+              <ul class="unstyled-list">
+                
+                  <li>
+                    <h3>영어, 중국어</h3>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill w-60"
+                           role="meter"
+                           aria-valuenow="50"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-bar-label">일상회화가능</span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li>
+                    <h3>MSOffice, SPSS, Amos</h3>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill w-80"
+                           role="meter"
+                           aria-valuenow="90"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-bar-label">익숙함</span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li>
+                    <h3>파이썬, 티킨터, 쟝고, 포토샵</h3>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill w-50"
+                           role="meter"
+                           aria-valuenow="75"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-bar-label">어느정도 익숙함</span>
+                      </div>
+                    </div>
+                  </li>
+                
+              </ul>
+            </section>
+          
+
+          
+
+          
+            <section>
+              <h2 class="section-heading">관심사</h2>
+              
+                <section>
+                  <h3>체력단련</h3>
+                  
+                  
+                    <div class="gallery side-gallery">
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="portfolio_media/kenshin.png"
+                               alt="Wooden Necklace from Walnut Scrap">
+                          <figcaption>바람의검심</figcaption>
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+                <section>
+                  <h3>여행</h3>
+                  
+                  
+                    <div class="gallery side-gallery">
+                      
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="portfolio_media/ww3.png"
+                               alt="Chess Board made from Walnut and Maple">
+                          <figcaption>후쿠오카 해변</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="portfolio_media/ww4.png"
+                               alt="Wooden Necklace from Walnut Scrap">
+                          <figcaption>바이칼호수</figcaption>
+                        </figure>
+                      
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="portfolio_media/ww5.png"
+                               alt="Wooden Necklace from Walnut Scrap">
+                          <figcaption>바이칼호수캠핑</figcaption>
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+            </section>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© 2025 JunSoo Kang. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
-
