@@ -4,35 +4,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalCaption = document.getElementById("modal-caption");
   const closeBtn = document.querySelector(".close-btn");
 
-  // Add click listener to all figures in the gallery
-  document.querySelectorAll(".lightbox-trigger").forEach((figure) => {
+  document.querySelectorAll(".gallery figure").forEach((figure) => {
+    figure.style.cursor = "pointer"; // Ensures mouse cursor shows pointer
+    
     figure.addEventListener("click", () => {
       const img = figure.querySelector("img");
       const caption = figure.querySelector("figcaption");
 
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-      modalCaption.textContent = caption ? caption.textContent : "";
+      if (img) {
+        // Use currentSrc or src attribute
+        modalImg.src = img.currentSrc || img.src;
+        modalImg.alt = img.alt || "Enlarged Image";
+        modalCaption.textContent = caption ? caption.textContent : "";
+        
+        modal.classList.add("active");
+      }
     });
   });
 
-  // Close modal when clicking the close button
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  const closeModal = () => {
+    modal.classList.remove("active");
+  };
 
-  // Close modal when clicking anywhere outside the image
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close when clicking dark overlay background
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.style.display = "none";
+      closeModal();
     }
   });
 
-  // Close modal on Pressing Escape key
+  // Close on Escape key press
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "flex") {
-      modal.style.display = "none";
+    if (e.key === "Escape") {
+      closeModal();
     }
   });
 });

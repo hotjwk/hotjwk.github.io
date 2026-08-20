@@ -386,38 +386,43 @@ blockquote {
   transform: scale(1.02);
 }
 
-/* Modal Background */
+/* Modal Background Overlay */
 .modal {
-  display: none; 
+  display: none; /* Controlled by JS */
   position: fixed; 
-  z-index: 1000; 
-  left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0, 0, 0, 0.85); 
-  backdrop-filter: blur(5px);
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.9); 
+  z-index: 9999;
+  
+  /* Flexbox centering */
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+/* Force modal to show as flex when active */
+.modal.active {
+  display: flex !important;
+}
+
 /* Modal Content (Image) */
 .modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
+  max-width: 90vw;
   max-height: 80vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Caption Text */
 #modal-caption {
-  margin-top: 12px;
-  color: #ccc;
-  font-size: 1rem;
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -425,16 +430,16 @@ blockquote {
 .close-btn {
   position: absolute;
   top: 20px;
-  right: 35px;
-  color: #fff;
+  right: 30px;
+  color: #ffffff;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  line-height: 1;
 }
 
 .close-btn:hover {
-  color: #bbb;
+  color: #ccc;
 }
 
 @media (min-width: 37.5rem) {
